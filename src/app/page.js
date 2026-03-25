@@ -54,13 +54,13 @@ export default function Home() {
     <div style={{ minHeight: "100vh", background: "var(--offwhite)", paddingBottom: 80 }}>
 
       {/* Hero */}
-      <div style={{ background: "var(--navy)", padding: "52px 24px 64px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <div style={{ background: "var(--navy)", padding: "0px 24px 64px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         {/* Subtle grid pattern */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,140,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,140,0,0.04) 1px, transparent 1px)", backgroundSize: "40px 40px", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
           {/* Centered large logo */}
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 0 }}>
             <img
               src="/Logo_JPG.png"
               alt="Rental Marketing Pros"
