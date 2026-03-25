@@ -40,20 +40,21 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--offwhite)", paddingBottom: 80 }}>
 
-      {/* Top nav bar */}
-      <div style={{ background: "var(--navy)", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56, borderBottom: "3px solid var(--orange)" }}>
-        <Logo size="sm" theme="dark" />
-        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase" }}>
-          GBP Optimizer
-        </span>
-      </div>
-
       {/* Hero */}
       <div style={{ background: "var(--navy)", padding: "52px 24px 64px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         {/* Subtle grid pattern */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,140,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,140,0,0.04) 1px, transparent 1px)", backgroundSize: "40px 40px", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
+          {/* Centered large logo */}
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
+            <img
+              src="/Logo_JPG.png"
+              alt="Rental Marketing Pros"
+              style={{ height: 120, width: "auto", objectFit: "contain" }}
+            />
+          </div>
+
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,140,0,0.12)", border: "1px solid rgba(255,140,0,0.3)", borderRadius: 20, padding: "5px 16px", marginBottom: 24 }}>
             <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--orange)" }} />
             <span style={{ fontSize: 11, color: "var(--orange)", letterSpacing: 2, fontWeight: 700, fontFamily: "'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
@@ -168,6 +169,37 @@ export default function Home() {
         )}
 
       </main>
+
+      {/* Booking Widget */}
+      <div style={{ maxWidth: 900, margin: "60px auto 0", padding: "0 24px" }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,140,0,0.1)", border: "1px solid rgba(255,140,0,0.3)", borderRadius: 20, padding: "5px 16px", marginBottom: 14 }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--orange)" }} />
+            <span style={{ fontSize: 11, color: "var(--orange)", letterSpacing: 2, fontWeight: 700, fontFamily: "'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
+              Next Step
+            </span>
+          </div>
+          <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 32px)", color: "var(--navy)", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 8px" }}>
+            Ready to Grow Your Rental Business?
+          </h2>
+          <p style={{ color: "var(--gray)", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
+            Book a free strategy call with our team and let&apos;s put your optimized profile to work.
+          </p>
+        </div>
+
+        <div
+          id="SOIDIV_rental-revenue-call"
+          data-so-page="rental-revenue-call"
+          data-height="550"
+          data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;"
+          data-psz="00"
+        />
+        <script
+          type="text/javascript"
+          src="https://cdn.oncehub.com/mergedjs/so.js"
+          async
+        />
+      </div>
 
       {/* Footer */}
       <footer style={{ marginTop: 80, background: "var(--navy)", padding: "24px", textAlign: "center", borderTop: "3px solid var(--orange)" }}>
