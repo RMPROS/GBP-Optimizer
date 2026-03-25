@@ -176,7 +176,7 @@ export default function Home() {
             Ready to Grow Your Rental Business?
           </h2>
           <p style={{ color: "var(--gray)", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
-            Book a free strategy call with our team and let&apos;s put your optimized profile to work.
+            Book a free discovery call with our team and let&apos;s put your optimized profile to work.
           </p>
         </div>
 
