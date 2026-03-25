@@ -30,6 +30,18 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Request failed");
       setResult(data);
+
+      // Fire usage log (non-blocking)
+      fetch("/api/log", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          businessName: business?.name || "",
+          businessAddress: business?.address || "",
+          businessCategory: business?.category || "",
+          descriptionLength: description.length,
+        }),
+      }).catch(() => {});
     } catch (err) {
       setError(err.message || "Something went wrong. Please try again.");
     } finally { setLoading(false); }
