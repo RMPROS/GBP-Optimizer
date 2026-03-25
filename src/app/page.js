@@ -51,7 +51,7 @@ export default function Home() {
             <img
               src="/Logo_JPG.png"
               alt="Rental Marketing Pros"
-              style={{ height: 120, width: "auto", objectFit: "contain" }}
+              style={{ height: 200, width: "auto", objectFit: "contain" }}
             />
           </div>
 
