@@ -51,15 +51,8 @@ export default function Home() {
             <img
               src="/Logo_JPG.png"
               alt="Rental Marketing Pros"
-              style={{ height: 200, width: "auto", objectFit: "contain" }}
+              style={{ height: 350, width: "auto", objectFit: "contain" }}
             />
-          </div>
-
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,140,0,0.12)", border: "1px solid rgba(255,140,0,0.3)", borderRadius: 20, padding: "5px 16px", marginBottom: 24 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--orange)" }} />
-            <span style={{ fontSize: 11, color: "var(--orange)", letterSpacing: 2, fontWeight: 700, fontFamily: "'Barlow Condensed', sans-serif", textTransform: "uppercase" }}>
-              AI-Powered Tool
-            </span>
           </div>
 
           <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "clamp(32px, 5vw, 56px)", color: "#fff", lineHeight: 1.05, margin: "0 0 8px", textTransform: "uppercase", letterSpacing: 1 }}>
