@@ -62,7 +62,7 @@ export default function Home() {
             Description Optimizer
           </h1>
           <p style={{ color: "var(--gray)", fontSize: 16, margin: "0 auto", maxWidth: 500, lineHeight: 1.6 }}>
-            Find your business, paste your current description, and get 3 AI-optimized alternatives scored against Google&apos;s 7 best-practice criteria.
+            Find your business, paste your current description, and get 3 optimized alternatives scored against Google&apos;s 7 best-practice criteria.
           </p>
         </div>
       </div>
