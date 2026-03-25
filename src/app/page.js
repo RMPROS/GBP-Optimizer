@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 import Logo from "../components/Logo";
 import PlacesSearch from "../components/PlacesSearch";
 import BusinessContext from "../components/BusinessContext";
@@ -199,10 +200,9 @@ export default function Home() {
           data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;"
           data-psz="00"
         />
-        <script
-          type="text/javascript"
+        <Script
           src="https://cdn.oncehub.com/mergedjs/so.js"
-          async
+          strategy="lazyOnload"
         />
       </div>
 
