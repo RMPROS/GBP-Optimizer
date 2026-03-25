@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "GBP Description Optimizer",
-  description: "AI-powered Google Business Profile description optimizer",
+  title: "GBP Optimizer | Rental Marketing Pros",
+  description: "AI-powered Google Business Profile description optimizer by Rental Marketing Pros",
 };
 
 export default function RootLayout({ children }) {

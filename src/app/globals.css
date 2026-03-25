@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #0c0f1a;
-  --surface:    rgba(255,255,255,0.03);
-  --border:     rgba(255,255,255,0.08);
-  --text:       #e8eaf0;
-  --text-muted: rgba(255,255,255,0.45);
-  --text-faint: rgba(255,255,255,0.25);
-  --accent:     #4f8ef7;
-  --accent-2:   #7c5cfc;
-  --green:      #10b981;
-  --amber:      #f59e0b;
-  --red:        #ef4444;
-  --radius:     12px;
+  --navy:       #0A2342;
+  --navy-light: #0d2d57;
+  --navy-dark:  #071829;
+  --gray:       #A1A0A5;
+  --orange:     #FF8C00;
+  --orange-dim: rgba(255,140,0,0.15);
+  --orange-glow:rgba(255,140,0,0.25);
+  --offwhite:   #F4F4F4;
+  --white:      #ffffff;
+  --border:     rgba(255,255,255,0.1);
+  --border-navy:rgba(10,35,66,0.15);
+  --radius:     10px;
   --radius-lg:  16px;
 }
 
 html, body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  background: var(--offwhite);
+  color: var(--navy);
+  font-family: 'Barlow', sans-serif;
   font-size: 15px;
   line-height: 1.6;
   min-height: 100vh;
@@ -29,10 +29,13 @@ html, body {
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--offwhite); }
+::-webkit-scrollbar-thumb { background: var(--gray); border-radius: 3px; }
 
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse   { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes fadeUp  { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
 
-.animate-pulse { animation: pulse 1.5s ease-in-out infinite; }
+.animate-pulse  { animation: pulse 1.5s ease-in-out infinite; }
+.animate-fadeUp { animation: fadeUp 0.4s ease forwards; }
