@@ -9,6 +9,7 @@ export default function Dashboard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [expanded, setExpanded] = useState(null);
 
   const fetchLogs = async (pwd) => {
     setLoading(true);
@@ -50,7 +51,6 @@ export default function Dashboard() {
             Usage Dashboard
           </h2>
           <p style={{ color: "var(--gray)", fontSize: 13, margin: "0 0 24px" }}>Enter your dashboard password to continue.</p>
-
           <form onSubmit={handleLogin}>
             <input
               type="password"
@@ -75,7 +75,6 @@ export default function Dashboard() {
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--offwhite)", paddingBottom: 60 }}>
-      {/* Nav */}
       <div style={{ background: "var(--navy)", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56, borderBottom: "3px solid var(--orange)" }}>
         <Logo size="sm" theme="dark" />
         <a href="/" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase", textDecoration: "none" }}>
@@ -83,7 +82,7 @@ export default function Dashboard() {
         </a>
       </div>
 
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "40px 24px 0" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 24px 0" }}>
         <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 32, color: "var(--navy)", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 28px" }}>
           Usage Dashboard
         </h1>
@@ -112,33 +111,58 @@ export default function Dashboard() {
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(10,35,66,0.08)" }}>
-                  {["Date & Time", "Business Name", "Address", "Category", "Desc. Length"].map((h, i) => (
+                  {["Date & Time", "Business Name", "Address", "Category", "Chars", "Description"].map((h, i) => (
                     <th key={i} style={{ textAlign: "left", padding: "10px 16px", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 1, textTransform: "uppercase", whiteSpace: "nowrap" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {data.logs.map((log, i) => (
-                  <tr key={log.id} style={{ borderBottom: "1px solid rgba(10,35,66,0.06)", background: i % 2 === 0 ? "#fff" : "rgba(10,35,66,0.02)" }}>
-                    <td style={{ padding: "10px 16px", color: "var(--gray)", whiteSpace: "nowrap", fontFamily: "monospace", fontSize: 12 }}>{formatDate(log.created_at)}</td>
-                    <td style={{ padding: "10px 16px", color: "var(--navy)", fontWeight: 600 }}>{log.business_name || "—"}</td>
-                    <td style={{ padding: "10px 16px", color: "var(--gray)", maxWidth: 200, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{log.business_address || "—"}</td>
-                    <td style={{ padding: "10px 16px" }}>
-                      {log.business_category
-                        ? <span style={{ background: "rgba(255,140,0,0.1)", color: "var(--orange)", border: "1px solid rgba(255,140,0,0.25)", borderRadius: 20, padding: "2px 10px", fontSize: 11, fontWeight: 600, textTransform: "capitalize", whiteSpace: "nowrap" }}>{log.business_category}</span>
-                        : <span style={{ color: "var(--gray)" }}>—</span>
-                      }
-                    </td>
-                    <td style={{ padding: "10px 16px", color: "var(--navy)", fontFamily: "monospace" }}>{log.description_length} chars</td>
-                  </tr>
+                  <>
+                    <tr
+                      key={log.id}
+                      onClick={() => setExpanded(expanded === log.id ? null : log.id)}
+                      style={{ borderBottom: expanded === log.id ? "none" : "1px solid rgba(10,35,66,0.06)", background: i % 2 === 0 ? "#fff" : "rgba(10,35,66,0.02)", cursor: log.description_text ? "pointer" : "default" }}
+                    >
+                      <td style={{ padding: "10px 16px", color: "var(--gray)", whiteSpace: "nowrap", fontFamily: "monospace", fontSize: 12 }}>{formatDate(log.created_at)}</td>
+                      <td style={{ padding: "10px 16px", color: "var(--navy)", fontWeight: 600 }}>{log.business_name || "—"}</td>
+                      <td style={{ padding: "10px 16px", color: "var(--gray)", maxWidth: 180, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{log.business_address || "—"}</td>
+                      <td style={{ padding: "10px 16px" }}>
+                        {log.business_category
+                          ? <span style={{ background: "rgba(255,140,0,0.1)", color: "var(--orange)", border: "1px solid rgba(255,140,0,0.25)", borderRadius: 20, padding: "2px 10px", fontSize: 11, fontWeight: 600, textTransform: "capitalize", whiteSpace: "nowrap" }}>{log.business_category}</span>
+                          : <span style={{ color: "var(--gray)" }}>—</span>
+                        }
+                      </td>
+                      <td style={{ padding: "10px 16px", color: "var(--navy)", fontFamily: "monospace" }}>{log.description_length}</td>
+                      <td style={{ padding: "10px 16px", maxWidth: 260, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "var(--gray)" }}>
+                        {log.description_text
+                          ? <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                              <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{log.description_text}</span>
+                              <span style={{ flexShrink: 0, fontSize: 10, color: "var(--orange)", fontWeight: 700 }}>{expanded === log.id ? "▲" : "▼"}</span>
+                            </span>
+                          : "—"
+                        }
+                      </td>
+                    </tr>
+                    {expanded === log.id && log.description_text && (
+                      <tr key={`${log.id}-exp`} style={{ borderBottom: "1px solid rgba(10,35,66,0.06)", background: i % 2 === 0 ? "#fff" : "rgba(10,35,66,0.02)" }}>
+                        <td colSpan={6} style={{ padding: "0 16px 16px 16px" }}>
+                          <div style={{ background: "rgba(255,140,0,0.05)", border: "1px solid rgba(255,140,0,0.2)", borderRadius: 8, padding: "14px 16px", fontSize: 13, color: "var(--navy)", lineHeight: 1.7, whiteSpace: "pre-wrap" }}>
+                            {log.description_text}
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+                  </>
                 ))}
                 {data.logs.length === 0 && (
-                  <tr><td colSpan={5} style={{ padding: "32px", textAlign: "center", color: "var(--gray)" }}>No uses logged yet.</td></tr>
+                  <tr><td colSpan={6} style={{ padding: "32px", textAlign: "center", color: "var(--gray)" }}>No uses logged yet.</td></tr>
                 )}
               </tbody>
             </table>
           </div>
         </div>
+        <p style={{ marginTop: 12, fontSize: 12, color: "var(--gray)", textAlign: "right" }}>Click any row to expand the full description.</p>
       </div>
     </div>
   );

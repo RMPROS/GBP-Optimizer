@@ -41,6 +41,7 @@ export default function Home() {
           businessAddress: business?.address || "",
           businessCategory: business?.category || "",
           descriptionLength: description.length,
+          descriptionText: description,
         }),
       }).catch(() => {});
     } catch (err) {
