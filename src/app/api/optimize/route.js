@@ -74,6 +74,6 @@ export async function POST(request) {
     return Response.json(result);
   } catch (err) {
     console.error("Optimize error:", err);
-    return Response.json({ error: "Failed to analyze. Please try again." }, { status: 500 });
+    return Response.json({ error: "We are sorry the tool is not working right now. Please try again later." }, { status: 500 });
   }
 }

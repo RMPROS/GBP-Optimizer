@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "GBP Optimizer | Rental Marketing Pros",
-  description: "AI-powered Google Business Profile description optimizer by Rental Marketing Pros",
+  title: "GBP Description Optimizer | Rental Marketing Pros",
+  description: "Optimize your Google Business Profile description with Rental Marketing Pros",
 };
 
 export const viewport = {
