@@ -17,7 +17,7 @@ function ScoreRing({ score }) {
           style={{ transition: "stroke-dasharray 1.2s cubic-bezier(0.4,0,0.2,1)" }} />
       </svg>
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-        <span style={{ fontSize: 18, fontWeight: 700, color, fontFamily: "var(--font-cond)" }}>{score}</span>
+        <span style={{ fontSize: 18, fontWeight: 700, color, fontFamily: "var(--font)" }}>{score}</span>
         <span style={{ fontSize: 9, color: "var(--gray)", letterSpacing: 1 }}>/ 100</span>
       </div>
     </div>
@@ -38,7 +38,7 @@ function Tag({ children, variant }) {
 const card = { background: "white", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)", overflow: "hidden", marginBottom: "1.25rem" };
 const cardHeader = { background: "var(--navy)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: 12 };
 const iconBox = { width: 32, height: 32, background: "rgba(255,140,0,0.2)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 };
-const cardTitle = { fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
+const cardTitle = { fontFamily: "var(--font)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
 const cardSub = { fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 };
 
 export default function AnalysisCard({ analysis }) {
@@ -58,7 +58,7 @@ export default function AnalysisCard({ analysis }) {
         <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
           <ScoreRing score={analysis.score} />
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 13, color: "var(--navy)", marginBottom: 10, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+            <div style={{ fontFamily: "var(--font)", fontWeight: 700, fontSize: 13, color: "var(--navy)", marginBottom: 10, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", textTransform: "uppercase", letterSpacing: "0.04em" }}>
               Current Score
               <span style={{ fontFamily: "monospace", fontSize: 11, color: "var(--gray)", fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>{analysis.charCount} chars</span>
             </div>

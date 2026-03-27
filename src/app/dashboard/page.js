@@ -47,7 +47,7 @@ export default function Dashboard() {
           <Logo size="md" theme="dark" />
         </div>
         <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius-lg)", padding: "32px 36px", width: "100%", maxWidth: 380 }}>
-          <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 22, color: "#fff", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 6px" }}>
+          <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 22, color: "#fff", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 6px" }}>
             Usage Dashboard
           </h2>
           <p style={{ color: "var(--gray)", fontSize: 13, margin: "0 0 24px" }}>Enter your dashboard password to continue.</p>
@@ -57,13 +57,13 @@ export default function Dashboard() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              style={{ width: "100%", background: "rgba(255,255,255,0.06)", border: "1.5px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", color: "#fff", fontFamily: "'Barlow', sans-serif", fontSize: 15, padding: "12px 16px", outline: "none", marginBottom: 12, boxSizing: "border-box" }}
+              style={{ width: "100%", background: "rgba(255,255,255,0.06)", border: "1.5px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", color: "#fff", fontFamily: "'Montserrat', sans-serif", fontSize: 15, padding: "12px 16px", outline: "none", marginBottom: 12, boxSizing: "border-box" }}
             />
             {error && <p style={{ color: "#fca5a5", fontSize: 13, margin: "0 0 12px" }}>{error}</p>}
             <button
               type="submit"
               disabled={loading}
-              style={{ width: "100%", background: "var(--orange)", color: "#fff", border: "none", borderRadius: "var(--radius)", padding: "13px", fontFamily: "'Barlow Condensed', sans-serif", fontSize: 16, fontWeight: 800, cursor: "pointer", letterSpacing: 1, textTransform: "uppercase" }}
+              style={{ width: "100%", background: "var(--orange)", color: "#fff", border: "none", borderRadius: "var(--radius)", padding: "13px", fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 800, cursor: "pointer", letterSpacing: 1, textTransform: "uppercase" }}
             >
               {loading ? "Loading…" : "View Dashboard"}
             </button>
@@ -77,13 +77,13 @@ export default function Dashboard() {
     <div style={{ minHeight: "100vh", background: "var(--offwhite)", paddingBottom: 60 }}>
       <div style={{ background: "var(--navy)", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56, borderBottom: "3px solid var(--orange)" }}>
         <Logo size="sm" theme="dark" />
-        <a href="/" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase", textDecoration: "none" }}>
+        <a href="/" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase", textDecoration: "none" }}>
           ← Back to Tool
         </a>
       </div>
 
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 24px 0" }}>
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 32, color: "var(--navy)", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 28px" }}>
+        <h1 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontSize: 32, color: "var(--navy)", textTransform: "uppercase", letterSpacing: 0.5, margin: "0 0 28px" }}>
           Usage Dashboard
         </h1>
 
@@ -95,8 +95,8 @@ export default function Dashboard() {
             { label: "Last 24 Hours", value: data.stats.today },
           ].map((s, i) => (
             <div key={i} style={{ background: "#fff", border: "1px solid rgba(10,35,66,0.1)", borderRadius: "var(--radius-lg)", padding: "20px 24px", boxShadow: "0 2px 12px rgba(10,35,66,0.06)" }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 8 }}>{s.label}</div>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 40, color: "var(--navy)", lineHeight: 1 }}>{s.value}</div>
+              <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 8 }}>{s.label}</div>
+              <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontSize: 40, color: "var(--navy)", lineHeight: 1 }}>{s.value}</div>
             </div>
           ))}
         </div>
@@ -104,7 +104,7 @@ export default function Dashboard() {
         {/* Log table */}
         <div style={{ background: "#fff", border: "1px solid rgba(10,35,66,0.1)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "0 2px 12px rgba(10,35,66,0.06)" }}>
           <div style={{ background: "var(--navy)", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 14, color: "#fff", textTransform: "uppercase", letterSpacing: 0.5 }}>Recent Uses</span>
+            <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 14, color: "#fff", textTransform: "uppercase", letterSpacing: 0.5 }}>Recent Uses</span>
             <span style={{ fontFamily: "monospace", fontSize: 12, color: "var(--gray)" }}>{data.logs.length} records</span>
           </div>
           <div style={{ overflowX: "auto" }}>
@@ -112,7 +112,7 @@ export default function Dashboard() {
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(10,35,66,0.08)" }}>
                   {["Date & Time", "Business Name", "Address", "Category", "Chars", "Description"].map((h, i) => (
-                    <th key={i} style={{ textAlign: "left", padding: "10px 16px", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 1, textTransform: "uppercase", whiteSpace: "nowrap" }}>{h}</th>
+                    <th key={i} style={{ textAlign: "left", padding: "10px 16px", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 1, textTransform: "uppercase", whiteSpace: "nowrap" }}>{h}</th>
                   ))}
                 </tr>
               </thead>

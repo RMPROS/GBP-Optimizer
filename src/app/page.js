@@ -97,7 +97,7 @@ export default function Home() {
   const cardOpen = { background: "white", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)", overflow: "visible", marginBottom: "1.25rem" };
   const cardHeader = { background: "var(--navy)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: 12, borderRadius: "var(--radius-lg) var(--radius-lg) 0 0" };
   const iconBox = { width: 32, height: 32, background: "rgba(255,140,0,0.2)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 };
-  const cardTitle = { fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
+  const cardTitle = { fontFamily: "var(--font)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
   const cardSub = { fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 };
   const inputStyle = { fontFamily: "var(--font)", fontSize: 14, color: "var(--navy)", background: "var(--off-white)", border: "1.5px solid var(--border-strong)", borderRadius: "var(--radius)", padding: "11px 14px", outline: "none", width: "100%", resize: "vertical", lineHeight: 1.65, WebkitAppearance: "none" };
 
@@ -155,7 +155,7 @@ export default function Home() {
         {/* Page title — in off-white section matching reference app */}
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <h1 className="rmp-page-title" style={{
-            fontFamily: "var(--font-cond)", fontWeight: 900,
+            fontFamily: "var(--font)", fontWeight: 900,
             fontSize: "clamp(28px, 5vw, 40px)", textTransform: "uppercase",
             letterSpacing: "0.02em", color: "var(--navy)", lineHeight: 1.1,
           }}>
@@ -273,7 +273,7 @@ export default function Home() {
       {/* ── Footer — exact match to GBP Services ── */}
       <footer style={{ background: "var(--navy)", borderTop: "3px solid var(--orange)", marginTop: "3rem" }}>
         <div className="footer-body" style={{ maxWidth: 1060, margin: "0 auto", padding: "2.5rem 1.5rem", textAlign: "center" }}>
-          <div style={{ fontFamily: "var(--font-cond)", fontWeight: 900, fontSize: "clamp(20px, 4vw, 30px)", color: "white", textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: 8 }}>
+          <div style={{ fontFamily: "var(--font)", fontWeight: 900, fontSize: "clamp(20px, 4vw, 30px)", color: "white", textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: 8 }}>
             Ready to Grow Your <span style={{ color: "var(--orange)" }}>Rental Business?</span>
           </div>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 14, marginBottom: "1.75rem", maxWidth: 440, margin: "0 auto 1.75rem" }}>

@@ -17,7 +17,7 @@ function CharBar({ count }) {
 const card = { background: "white", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)", overflow: "hidden", marginBottom: "1.25rem" };
 const cardHeader = { background: "var(--navy)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: 12 };
 const iconBox = { width: 32, height: 32, background: "rgba(255,140,0,0.2)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 };
-const cardTitle = { fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
+const cardTitle = { fontFamily: "var(--font)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
 const cardSub = { fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 };
 
 export default function SuggestionTabs({ suggestions }) {
@@ -62,7 +62,7 @@ export default function SuggestionTabs({ suggestions }) {
               fontFamily: "var(--font)", cursor: "pointer", borderRadius: 8,
               transition: "all 0.15s", textAlign: "center",
             }}>
-              <span style={{ width: 20, height: 20, borderRadius: "50%", background: active === i ? "rgba(255,140,0,0.3)" : "rgba(10,35,66,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontFamily: "var(--font-cond)", fontWeight: 700, color: active === i ? "var(--orange)" : "var(--gray)" }}>{i + 1}</span>
+              <span style={{ width: 20, height: 20, borderRadius: "50%", background: active === i ? "rgba(255,140,0,0.3)" : "rgba(10,35,66,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontFamily: "var(--font)", fontWeight: 700, color: active === i ? "var(--orange)" : "var(--gray)" }}>{i + 1}</span>
               <span className="tab-label-text" style={{ fontSize: 10, lineHeight: 1.3, fontWeight: 600, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", width: "100%", maxWidth: 120 }}>{s.label}</span>
             </button>
           ))}
@@ -73,7 +73,7 @@ export default function SuggestionTabs({ suggestions }) {
           {/* Mini header */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "12px 14px", background: "var(--navy-light)", gap: 10 }}>
             <div style={{ minWidth: 0, flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 13, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" }}>{cur.label}</div>
+              <div style={{ fontFamily: "var(--font)", fontWeight: 700, fontSize: 13, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" }}>{cur.label}</div>
               <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 1, fontFamily: "monospace" }}>{cur.charCount} / 750 chars</div>
               <CharBar count={cur.charCount} />
             </div>
@@ -94,12 +94,12 @@ export default function SuggestionTabs({ suggestions }) {
 
             {/* 250 preview */}
             <div style={{ background: "var(--info-bg)", border: "1px solid var(--info-border)", borderRadius: "var(--radius)", padding: "10px 12px", marginBottom: 12 }}>
-              <div style={{ fontSize: 10, color: "var(--info-text)", letterSpacing: "0.08em", fontFamily: "var(--font-cond)", fontWeight: 700, textTransform: "uppercase", marginBottom: 5 }}>Preview — first 250 chars shown before "More"</div>
+              <div style={{ fontSize: 10, color: "var(--info-text)", letterSpacing: "0.08em", fontFamily: "var(--font)", fontWeight: 700, textTransform: "uppercase", marginBottom: 5 }}>Preview — first 250 chars shown before "More"</div>
               <p style={{ margin: 0, fontSize: 12, color: "var(--navy)", lineHeight: 1.6, opacity: 0.75 }}>{cur.description.slice(0, PREVIEW_LIMIT)}<span style={{ color: "var(--orange)" }}>…</span></p>
             </div>
 
             <div style={{ paddingTop: 12, borderTop: "1px solid var(--border)" }}>
-              <span style={{ fontSize: 10, color: "var(--gray)", letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-cond)", fontWeight: 700, display: "block", marginBottom: 4 }}>Why This Works</span>
+              <span style={{ fontSize: 10, color: "var(--gray)", letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font)", fontWeight: 700, display: "block", marginBottom: 4 }}>Why This Works</span>
               <p style={{ margin: 0, fontSize: 12, color: "var(--gray)", lineHeight: 1.6 }}>{cur.rationale}</p>
             </div>
           </div>

@@ -71,7 +71,7 @@ export default function PlacesSearch({ onBusinessSelect, apiKey }) {
         gmp-place-autocomplete, gmp-basic-place-autocomplete {
           --gmp-input-padding: 13px 18px 13px 44px;
           --gmp-input-font-size: 15px;
-          --gmp-input-font-family: 'Barlow', sans-serif;
+          --gmp-input-font-family: 'Montserrat', sans-serif;
           --gmp-input-border-radius: 10px;
           --gmp-input-border-color: rgba(10,35,66,0.2);
           --gmp-input-background: #F4F4F4;
