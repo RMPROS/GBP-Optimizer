@@ -94,7 +94,8 @@ export default function Home() {
 
   // Card style — exact match to GBP Services
   const card = { background: "white", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)", overflow: "hidden", marginBottom: "1.25rem" };
-  const cardHeader = { background: "var(--navy)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: 12 };
+  const cardOpen = { background: "white", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)", overflow: "visible", marginBottom: "1.25rem" };
+  const cardHeader = { background: "var(--navy)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: 12, borderRadius: "var(--radius-lg) var(--radius-lg) 0 0" };
   const iconBox = { width: 32, height: 32, background: "rgba(255,140,0,0.2)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 };
   const cardTitle = { fontFamily: "var(--font-cond)", fontWeight: 700, fontSize: 16, color: "white", textTransform: "uppercase", letterSpacing: "0.04em" };
   const cardSub = { fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 };
@@ -166,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Step 1 card */}
-        <div style={card}>
+        <div style={cardOpen}>
           <div className="rmp-card-header" style={cardHeader}>
             <div style={iconBox}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
