@@ -148,29 +148,22 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── Hero ── */}
-      <div style={{ background: "var(--navy)", padding: "2.5rem 1.5rem 3rem", textAlign: "center", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,140,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,140,0,0.04) 1px, transparent 1px)", backgroundSize: "40px 40px", pointerEvents: "none" }} />
-        <div style={{ position: "relative", zIndex: 1 }}>
+      {/* ── Main ── */}
+      <main className="rmp-main" style={{ maxWidth: 760, margin: "0 auto", padding: "1.5rem 1rem 2rem" }}>
+
+        {/* Page title — in off-white section matching reference app */}
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <h1 className="rmp-page-title" style={{
             fontFamily: "var(--font-cond)", fontWeight: 900,
             fontSize: "clamp(28px, 5vw, 40px)", textTransform: "uppercase",
-            letterSpacing: "0.02em", lineHeight: 1.1,
-            color: "var(--white)",
+            letterSpacing: "0.02em", color: "var(--navy)", lineHeight: 1.1,
           }}>
             GBP Description <span style={{ color: "var(--orange)" }}>Optimizer</span>
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 15, marginTop: 10, maxWidth: 520, margin: "10px auto 0", lineHeight: 1.6 }}>
+          <p style={{ color: "var(--gray)", fontSize: 15, marginTop: 8, maxWidth: 520, margin: "8px auto 0" }}>
             Find your business, paste your current description, and get 3 optimized alternatives scored against Google&apos;s 7 best-practice criteria.
           </p>
         </div>
-      </div>
-
-      {/* Orange stripe */}
-      <div style={{ height: 4, background: "linear-gradient(90deg, var(--orange) 0%, var(--orange-light) 50%, var(--orange) 100%)" }} />
-
-      {/* ── Main ── */}
-      <main className="rmp-main" style={{ maxWidth: 760, margin: "0 auto", padding: "1.5rem 1rem 2rem" }}>
 
         {/* Step 1 card */}
         <div style={card}>
