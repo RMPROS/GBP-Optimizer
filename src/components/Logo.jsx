@@ -3,7 +3,7 @@ export default function Logo({ size = "md" }) {
   const h = heights[size] || heights.md;
   return (
     <img
-      src="/Logo_JPG.png"
+      src="/logo_cropped.png"
       alt="Rental Marketing Pros"
       height={h}
       style={{ height: h, width: "auto", display: "block", objectFit: "contain" }}

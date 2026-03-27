@@ -54,6 +54,134 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--offwhite)", paddingBottom: 80 }}>
 
+      {/* Top header with share buttons */}
+      <div style={{ background: "var(--navy)", borderBottom: "3px solid var(--orange)", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 52, gap: 8 }}>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase", whiteSpace: "nowrap" }}>
+          Share This Tool
+        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+
+          {/* Facebook */}
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://desc.rentalmarketingpros.com" target="_blank" rel="noopener noreferrer" title="Share on Facebook"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", transition: "background 0.15s" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(24,119,242,0.3)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.07)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+
+          {/* Instagram */}
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Share on Instagram"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", transition: "background 0.15s" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(225,48,108,0.3)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.07)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          {/* LinkedIn */}
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://desc.rentalmarketingpros.com`} target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", transition: "background 0.15s" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(10,102,194,0.3)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.07)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+
+          {/* Email */}
+          <a href="mailto:?subject=Free GBP Description Optimizer&body=Optimize your Google Business Profile description with this free tool: https://desc.rentalmarketingpros.com" title="Share via Email"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", transition: "background 0.15s" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(255,140,0,0.3)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.07)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+
+          {/* SMS */}
+          <a href="sms:?body=Check out this free Google Business Profile description optimizer from Rental Marketing Pros: https://desc.rentalmarketingpros.com" title="Share via SMS"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", transition: "background 0.15s" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(34,197,94,0.3)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.07)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      {/* Header with share links */}
+      <div style={{ background: "var(--navy-dark, #071829)", borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "0 24px", height: 48, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 11, color: "var(--gray)", letterSpacing: 2, textTransform: "uppercase" }}>
+          Share This Tool
+        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+
+          {/* Facebook */}
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://desc.rentalmarketingpros.com" target="_blank" rel="noopener noreferrer" title="Share on Facebook"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", transition: "all 0.15s", textDecoration: "none" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(24,119,242,0.25)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+
+          {/* Instagram */}
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Share on Instagram"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", transition: "all 0.15s", textDecoration: "none" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(225,48,108,0.25)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="#ffffff" stroke="none"/>
+            </svg>
+          </a>
+
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://desc.rentalmarketingpros.com" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", transition: "all 0.15s", textDecoration: "none" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(10,102,194,0.25)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+
+          {/* Email */}
+          <a href="mailto:?subject=Check out this free GBP Description Optimizer&body=I found this free tool that optimizes your Google Business Profile description. Check it out: https://desc.rentalmarketingpros.com" title="Share via Email"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", transition: "all 0.15s", textDecoration: "none" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(255,140,0,0.25)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+
+          {/* SMS */}
+          <a href="sms:?body=Check out this free GBP Description Optimizer: https://desc.rentalmarketingpros.com" title="Share via SMS"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", transition: "all 0.15s", textDecoration: "none" }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(34,197,94,0.25)"}
+            onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
       {/* Hero */}
       <div style={{ background: "var(--navy)", padding: "0px 24px 64px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         {/* Subtle grid pattern */}
@@ -63,7 +191,7 @@ export default function Home() {
           {/* Centered large logo */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 0 }}>
             <img
-              src="/Logo_JPG.png"
+              src="/logo_cropped.png"
               alt="Rental Marketing Pros"
               style={{ height: 350, width: "auto", objectFit: "contain" }}
             />
