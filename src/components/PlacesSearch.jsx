@@ -74,12 +74,23 @@ export default function PlacesSearch({ onBusinessSelect, apiKey }) {
           --gmp-input-font-family: 'Barlow', sans-serif;
           --gmp-input-border-radius: 10px;
           --gmp-input-border-color: rgba(10,35,66,0.2);
-          --gmp-input-background: #ffffff;
+          --gmp-input-background: #F4F4F4;
           --gmp-input-color: #0A2342;
           --gmp-input-placeholder-color: #A1A0A5;
           --gmp-list-background-color: #ffffff;
           --gmp-list-border-radius: 10px;
+          --gmp-color-surface: #F4F4F4;
+          --gmp-color-on-surface: #0A2342;
+          --gmp-color-on-surface-variant: #A1A0A5;
+          --gmp-color-outline: rgba(10,35,66,0.2);
+          color-scheme: light;
           width: 100%; display: block;
+        }
+        gmp-place-autocomplete input,
+        gmp-basic-place-autocomplete input {
+          background: #F4F4F4 !important;
+          color: #0A2342 !important;
+          border-color: rgba(10,35,66,0.2) !important;
         }
       `}</style>
       <div style={styles.wrapper}>
