@@ -158,7 +158,7 @@ export default function Home() {
             fontSize: "clamp(28px, 5vw, 40px)", textTransform: "uppercase",
             letterSpacing: "0.02em", color: "var(--navy)", lineHeight: 1.1,
           }}>
-            GBP Description <span style={{ color: "var(--orange)" }}>Optimizer</span>
+            GBP <span style={{ color: "var(--orange)" }}>Description</span> Optimizer
           </h1>
           <p style={{ color: "var(--gray)", fontSize: 15, marginTop: 8, maxWidth: 520, margin: "8px auto 0" }}>
             Find your business, paste your current description, and get 3 optimized alternatives scored against Google&apos;s 7 best-practice criteria.
